@@ -24,4 +24,8 @@
           java-version: '17'
 
       - name: Unit Test
-        run: mvn test
+        run: |
+          mvn test
+          mvn compile
+      - name: Build Package
+        run: mvn package
